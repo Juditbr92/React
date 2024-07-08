@@ -1,11 +1,11 @@
 function Navbar () {
 
     return (
-        <div>
+        <nav>
             <a href="">Home</a>
             <a href="">Libros</a>
             <a href="">Log in</a>
-        </div>
+        </nav>
     )
 }
 

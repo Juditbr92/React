@@ -1,8 +1,12 @@
+import Logo from "./Logo"
+import Navbar from "./navbar"
+
 function Header () {
 
     return (
         <>
-        <img src="\logoNegro.jfif" alt="Logo de la aplicación. Pila de libros" />
+        <Logo/>
+        <Navbar></Navbar>
         </>
     )
 }
