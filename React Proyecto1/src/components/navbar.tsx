@@ -1,11 +1,11 @@
 function Navbar () {
 
     return (
-        <nav>
-            <a href="">Home</a>
-            <a href="">Libros</a>
-            <a href="">Log in</a>
-        </nav>
+        <nav className = "self-center justify-self-end">
+            <a className = "p-4" href="">Home</a>
+            <a className = "p-4" href="">Libros</a>
+            <a className = "m-4" href="">Log in</a>
+        </nav> 
     )
 }
 

@@ -1,9 +1,9 @@
 function Logo () {
     return (
-        <>
-            <img src="img\logo2.jfif" alt="Logo de la aplicación. Pila de libros" />
-            <span>MyBookShelf</span>
-        </>
+        <div className="flex items-center space-x-2">
+            <img  className = "w-40 h-51" src="img\logo2.jfif" alt="Logo de la aplicación. Pila de libros" />
+            <a className="self-center" href="">MyBookShelf</a>
+        </div>
         
     ) 
 }
