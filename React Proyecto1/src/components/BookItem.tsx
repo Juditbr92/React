@@ -1,27 +1,34 @@
-import React from 'react'
+import { AiTwotoneEdit } from "react-icons/ai"; 
+import { AiOutlineDelete } from "react-icons/ai"; 
+import { Book } from "../config/types"
 
-function BookItem () {
+type BookItemProps = {
+    book: Book
+}
+
+function BookItem (props: BookItemProps) {
+
+    const { book } = props; 
 
     return (
-        <div className="border-2 border-custom-bg p-2 m-3 w-60 rounded-md bg-emerald-100">
-            <img className= "mb-3 w-50" src="https://http2.mlstatic.com/D_NQ_NP_707573-MLM49187855321_022022-O.webp" alt="Image of book" />
-            <h2 className="font-serif text-black text-xl m-1">Dime quién soy</h2>
-            <div className="flex justify-between place-items-center">
-                <h3 className="font-serif text-lg m-1 ">Julia Navarro</h3>
-                <h4 className="font-serif text-sm m-1">Histórica</h4>
+        <article className="border-2 border-custom-bg my-3 w-45 rounded-md bg-emerald-100">
+            <img className= "mb-3 w-full" src= {book.photo} alt= {`Portada del libro ${book.title}`}/>
+
+            <div className="flex flex-col gap-2 p-2 ">
+                <span className="font-serif text-black text-xl">{book.title}</span>
+                <div className="flex justify-between items-center gap-2">
+                    <span className="font- text-gray-600">{book.author}</span>
+                    <span className="bg-custom-bg text-sm py-1 px-4 rounded-full text-white">{book.type}</span>
+                </div> 
+                <div className="flex items-center">
+                    <span className="m-1">{book.rating}</span>
+                    <button className="ml-auto text-xl mr-2"> <AiTwotoneEdit /></button>
+                    <button className="text-xl"><AiOutlineDelete className="text-red-700"/></button>
+                </div>
+                
             </div>
-            <span className="m-1">Rating *****</span>
-            <div>
-                <button className="m-1">Ver notas</button>
-                <button className="m-1">Delete</button>
-                <button className="m-1">Edit</button>
-            </div>
-            
-        </div>
+        </article>
     )
-        
-
-
 }
 
 export default BookItem

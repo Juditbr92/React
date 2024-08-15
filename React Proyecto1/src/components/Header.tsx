@@ -4,7 +4,7 @@ import Navbar from "./navbar"
 function Header () {
 
     return (
-        <header className="flex justify-between flex-nowrap bg-custom-bg text-white w-full h-23">
+        <header className="flex justify-between items-center flex-nowrap bg-custom-bg text-white w-full h-23 px-6">
             <Logo/>
             <Navbar></Navbar>
         </header>
