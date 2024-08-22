@@ -1,14 +1,19 @@
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/footer'
-import BookItem from './components/BookItem'
+import BookPage from './pages/BookPage'
+// import BookPage from './pages/BookPage'
 
 function App() {
 
   return (
-    <div className="bg-emerald-100">
+    <div className="bg-emerald-100 min-h-screen flex-col">
       <Header/>
-      <BookItem/>
+      
+      <main className='flex flex-grow'>
+        <BookPage/>
+      </main>
+
       <Footer/>
     </div>
   )
