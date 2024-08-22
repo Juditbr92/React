@@ -10,8 +10,16 @@ function BookItem (props: BookItemProps) {
 
     const { book } = props; 
 
+    function handleEditBook(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        console.log('Libro editado correctamente')
+    }
+
+    function handleDeleteBook(event: React.MouseEvent<SVGElement, MouseEvent>) {
+        console.log('Libro borrado correctamente')
+    }
+
     return (
-        <article className="border-2 border-custom-bg my-3 w-[300px] rounded-md bg-emerald-100">
+        <article className="border-2 border-custom-bg my-3 w-[300px] rounded-md bg-emerald-50">
             <img className= "mb-3 w-45 h-[350px] flex m-auto my-2" src= {book.photo} alt= {`Portada del libro ${book.title}`}/>
 
             <div className="flex flex-col gap-2 p-2 w-45">
@@ -22,8 +30,8 @@ function BookItem (props: BookItemProps) {
                 </div> 
                 <div className="flex items-center">
                     <span className="m-1">{book.rating}</span>
-                    <button className="ml-auto text-xl mr-2"> <AiTwotoneEdit /></button>
-                    <button className="text-xl"><AiOutlineDelete className="text-red-700"/></button>
+                    <button className="ml-auto text-xl mr-2"  onClick={handleEditBook}> <AiTwotoneEdit /></button>
+                    <button className="text-xl"><AiOutlineDelete className="text-red-700"  onClick={handleDeleteBook}/></button>
                 </div>
                 
             </div>
