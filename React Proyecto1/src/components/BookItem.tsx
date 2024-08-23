@@ -33,7 +33,7 @@ function BookItem (props: BookItemProps) {
                     <button className="ml-auto text-xl mr-2"  onClick={handleEditBook}> <AiTwotoneEdit /></button>
                     <button className="text-xl"><AiOutlineDelete className="text-red-700"  onClick={handleDeleteBook}/></button>
                 </div>
-                
+                <button>Mis notas</button>
             </div>
         </article>
     )
