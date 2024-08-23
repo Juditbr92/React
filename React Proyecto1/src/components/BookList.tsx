@@ -8,7 +8,7 @@ function BookList (){
             {/* Aquí hacemos un map de Book Item para que me saque todos los libros del array */}
             {
                 bookArray.map(book => {
-                    return <BookItem book= {book} />
+                    return <BookItem key={book.id_book} book= {book} />
                 })
             }
         </div>

@@ -7,8 +7,8 @@ function Navbar (props: MenuProps) {
     const {isSidebarOpen} = props;
 
     const commonClasses = "gap-6 text-white w-full justify-end items-center mr-8"
-    const sidebarClasses = "flex flex-col text-black"
-    const headerClasses = "hidden md:flex"
+    const sidebarClasses = "flex flex-col"
+    const headerClasses = "hidden md:flex "
     const classess = `${commonClasses} ${isSidebarOpen ? sidebarClasses : headerClasses}`
 
     return (

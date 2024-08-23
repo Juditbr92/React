@@ -7,10 +7,10 @@ import BookPage from './pages/BookPage'
 function App() {
 
   return (
-    <div className="bg-emerald-100 min-h-screen flex-col">
+    <div className="flex flex-col min-h-screen bg-emerald-100">
       <Header/>
       
-      <main className='flex flex-grow'>
+      <main className='flex-grow'>
         <BookPage/>
       </main>
 
