@@ -1,11 +1,13 @@
+import Navbar from "./navbar"
 
+type sidebarProps = {
+    isSidebarOpen: boolean;
+}
 
-function Sidebar () {
+function Sidebar ( {isSidebarOpen}: sidebarProps) {
     return (
-        <div className="bg-custom-bg w-auto h-auto flex flex-col md:hidden justify-start p-6 gap-3 text-white text-sm rounded">
-            <a className=" hover:text-black" href="">Home</a>
-            <a className=" hover:text-black" href="">Libros</a>
-            <a className=" hover:text-black" href="">Log in</a>
+        <div className="absolute h-auto w-auto bg-custom-bg border-2 border-emerald-100 rounded right-0 top-0 mt-20 p-10">
+            <Navbar isSidebarOpen={isSidebarOpen}/>
         </div>
     )
 }
