@@ -3,9 +3,7 @@ import React from 'react'
 
 function PrivateRoutes() {
 
-    const user= {
-        name: 'Judit'
-    }
+    const user = null
 
     return (
         <div>

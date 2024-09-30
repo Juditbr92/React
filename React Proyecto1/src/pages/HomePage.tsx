@@ -1,8 +1,9 @@
+import Titles from "../components/ui/Titles"
 
 function HomePage() {
     return (
         <div>
-            <h1>Esto es mi Home</h1>
+            <Titles>Home</Titles>
         </div>
     )
 }

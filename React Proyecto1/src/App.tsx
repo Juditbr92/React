@@ -15,7 +15,7 @@ import PublicRoutes from './components/PublicRoutes'
 function App() {
 
   return (
-    <div className="flex flex-col min-h-screen bg-emerald-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-custom-bg via-emerald-300 to-emerald-100">
       <Header/>
       
       <main className='flex-grow'>
@@ -23,18 +23,26 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />}/>
 
-          <Route element={<PublicRoutes />}>
-            <Route path='/login' element= {<LogInPage/>}/>
-            <Route path='/register' element={<RegisterPage />} />
-          </Route>
-          
-          <Route element={<PrivateRoutes />}>
+{/* Esto tiene que borrarse y quedar lo de las Private Routes, pero como no hay nadie logueado no funciona */}
             <Route path='/profile' element={<ProfilePage />} />
             <Route path='/books' element={<BookPage/>} />
             <Route path='/addBook' element={<AddBookPage />} />
             <Route path='/editBook' element = {<EditBookPage />} />
+
+
+          <Route element={<PublicRoutes />}>
+            <Route path='/login' element= {<LogInPage/>}/>
+            <Route path='/register' element={<RegisterPage />} />
+            
           </Route>
           
+          {/* <Route element={<PrivateRoutes />}>
+            <Route path='/profile' element={<ProfilePage />} />
+            <Route path='/books' element={<BookPage/>} />
+            <Route path='/addBook' element={<AddBookPage />} />
+            <Route path='/editBook' element = {<EditBookPage />} />
+          </Route> */}
+
         </Routes>
         
 

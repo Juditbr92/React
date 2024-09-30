@@ -13,7 +13,9 @@ theme: {
   colors: {
       'custom-bg': 'rgb(122, 172, 161)',
     },
-    
+  backgroundImage: {
+    'bookBgImage' : "url('public/img/hard-cover-books.jpg')"
+  }
   },
 },
 plugins: [],

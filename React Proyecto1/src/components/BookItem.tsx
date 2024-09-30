@@ -19,7 +19,7 @@ function BookItem (props: BookItemProps) {
     }
 
     return (
-        <article className="border-2 border-custom-bg my-3 w-[300px] md:w-45 h-[400px] md:h-[550px] rounded-md bg-emerald-50 flex flex-col ">
+        <article className="border-2 border-custom-bg my-3 w-[300px] md:w-45 h-[400px] md:h-[550px] rounded-md bg-emerald-100 flex flex-col ">
             <img className= "mb-3 w-25 md:w-45 h-[200px] md:h-[350px] flex m-auto my-2" src= {book.photo} alt= {`Portada del libro ${book.title}`}/>
 
             <div className="flex flex-col gap-2 p-2 flex-grow">

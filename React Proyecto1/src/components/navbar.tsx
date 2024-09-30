@@ -13,21 +13,17 @@ function Navbar (props: MenuProps) {
     const headerClasses = "hidden md:flex "
     const classes = `${commonClasses} ${isSidebarOpen ? sidebarClasses : headerClasses}`
 
-    // const user = {
-    //     name: 'Judit'
-    // };
-
-    const user = null;
+    const user = {}
 
     return (
         <nav className = {classes}>
-            <NavLink className=" hover:text-black" to="/">Home</NavLink>
-            {user && <NavLink className=" hover:text-black" to="/books">My books</NavLink>}
-            {!user && <NavLink className=" hover:text-black" to="/register">Register</NavLink>}
-            {!user && <NavLink className=" hover:text-black" to="/login">Log in</NavLink>}
-            {user && <NavLink className=" hover:text-black" to="/profile">Profile</NavLink>}
-            {user && <NavLink className=" hover:text-black" to="/addBook">Add book</NavLink>}
-            {user && <NavLink className=" hover:text-black" to="/editBook">Edit book</NavLink>}
+            <NavLink className="[&.active]:underline hover:text-black" to="/">Home</NavLink>
+            {user && <NavLink className="[&.active]:underline hover:text-black" to="/books">My books</NavLink>}
+            {!user && <NavLink className="[&.active]:underline hover:text-black active:text-black" to="/register">Register</NavLink>}
+            {!user && <NavLink className=" hover:text-black border-2 p-1 rounded hover:border-black" to="/login">Log in</NavLink>}
+            {user && <NavLink className=" [&.active]:underline hover:text-black" to="/profile">Profile</NavLink>}
+            {user && <NavLink className=" [&.active]:underline hover:text-black" to="/addBook">Add book</NavLink>}
+            {user && <NavLink className=" [&.active]:underline hover:text-black" to="/editBook">Edit book</NavLink>}
         </nav> 
     )
 }
