@@ -1,4 +1,4 @@
-import React, { useId } from 'react'
+import React, { useId , forwardRef } from 'react'
 
 type InputProps = {
     label?: string,
@@ -8,7 +8,7 @@ type InputProps = {
     newInputStyles?: string
 } & React.InputHTMLAttributes<HTMLInputElement>
 
-function Input(props: InputProps){
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input(props: InputProps, ref){
 
     const { label, placeholder, type, error, newInputStyles, ...rest} = props
 
@@ -19,6 +19,7 @@ function Input(props: InputProps){
             {label && <label htmlFor={inputId}>{label}</label>}
             <div className="relative">
                 <input 
+                ref = {ref}
                 id={inputId}
                 className= {`p-2 border-2 border-custom-bg bg-slate-100 rounded ${newInputStyles}`}
                 type={type || 'text'} 
@@ -28,6 +29,6 @@ function Input(props: InputProps){
             </div>
             
         </div>)
-}
+})
 
 export default Input

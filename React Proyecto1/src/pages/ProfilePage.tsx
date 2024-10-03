@@ -23,9 +23,7 @@ function ProfilePage() {
                     <Button>Update Profile</Button>
                     </form>
                 </div>
-
-
-
+                
             </div>
         
     </div>
