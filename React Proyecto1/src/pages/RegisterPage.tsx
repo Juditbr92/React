@@ -18,7 +18,7 @@ function RegisterPage() {
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$/
 
         if(name === 'username' && !value) checkErrors.username = 'Username required'
-        if(name === 'username' && value.length < 4 ) checkErrors.username = 'Username has to be longer than 4 characters'
+        if(name === 'username' && value.length < 4 ) checkErrors.username = 'Username has to be longer than 3 characters'
         if(name === 'email' && !emailRegex.test(value)) checkErrors.email = 'Email not valid'
         if(name === 'photo' && !value) checkErrors.photo = 'URL needed'
         if(name === 'password' && !value) checkErrors.password = 'Password required'
