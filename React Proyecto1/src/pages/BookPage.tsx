@@ -5,7 +5,7 @@ function BookPage() {
     
     return (
         <div className="ml-4 mt-4">
-            <h1 className="flex border-b-2 border-custom-bg mb-2 justify-center mx-4 text-4xl text-emerald-700 font-bold font-sans">My books</h1>
+            <h1 className="flex border-b-2 border-custom-bg mb-2 justify-center mx-4 text-4xl text-emerald-700 font-bold font-sans flex-wrap">My books</h1>
             {/* <BookItem book={book}/> */}
             <BookList/>
         </div>

@@ -18,7 +18,7 @@ function App() {
     <div className="flex flex-col min-h-screen bg-gradient-to-r from-custom-bg via-emerald-300 to-emerald-100">
       <Header/>
       
-      <main className='flex-grow'>
+      <main className='flex-grow max-h-screen'>
 
         <Routes>
           <Route path='/' element={<HomePage />}/>

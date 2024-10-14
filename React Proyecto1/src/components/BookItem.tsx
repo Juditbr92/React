@@ -1,6 +1,7 @@
 import { AiTwotoneEdit } from "react-icons/ai"; 
 import { AiOutlineDelete } from "react-icons/ai"; 
 import { Book } from "../config/types"
+import StarsRating from '../components/ui/StarsRating'
 
 type BookItemProps = {
     book: Book
@@ -29,11 +30,11 @@ function BookItem (props: BookItemProps) {
                     <span className="bg-custom-bg text-sm py-1 px-4 rounded-full text-white">{book.type}</span>
                 </div> 
                 <div className="flex items-center">
-                    <span className="m-1">{book.rating}</span>
+                    <span className="m-1"><StarsRating></StarsRating></span>
                     <button className="ml-auto text-xl mr-2"  onClick={handleEditBook}> <AiTwotoneEdit /></button>
                     <button className="text-xl"><AiOutlineDelete className="text-red-700"  onClick={handleDeleteBook}/></button>
                 </div>
-                <button>Mis notas</button>
+                <button className="p-2 rounded hover:border-2 hover:bg-custom-bg hover:text-white ">Mis notas</button>
             </div>
         </article>
     )
