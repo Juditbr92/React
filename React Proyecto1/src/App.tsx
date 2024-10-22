@@ -15,19 +15,19 @@ import PublicRoutes from './components/PublicRoutes'
 function App() {
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-custom-bg via-emerald-300 to-emerald-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-custom-bg via-emerald-300 to-emerald-100 w-auto">
       <Header/>
       
-      <main className='flex-grow max-h-screen'>
+      <main className='flex-grow h-auto '>
 
         <Routes>
           <Route path='/' element={<HomePage />}/>
 
 {/* Esto tiene que borrarse y quedar lo de las Private Routes, pero como no hay nadie logueado no funciona */}
-            <Route path='/profile' element={<ProfilePage />} />
+            {/* <Route path='/profile' element={<ProfilePage />} />
             <Route path='/books' element={<BookPage/>} />
             <Route path='/addBook' element={<AddBookPage />} />
-            <Route path='/editBook' element = {<EditBookPage />} />
+            <Route path='/editBook' element = {<EditBookPage />} /> */}
 
 
           <Route element={<PublicRoutes />}>
@@ -36,19 +36,20 @@ function App() {
             
           </Route>
           
-          {/* <Route element={<PrivateRoutes />}>
+          <Route element={<PrivateRoutes />}>
             <Route path='/profile' element={<ProfilePage />} />
             <Route path='/books' element={<BookPage/>} />
             <Route path='/addBook' element={<AddBookPage />} />
             <Route path='/editBook' element = {<EditBookPage />} />
-          </Route> */}
+          </Route>
 
         </Routes>
         
+        
 
       </main>
-
       <Footer/>
+      
     </div>
   )
 }

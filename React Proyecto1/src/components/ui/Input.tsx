@@ -15,7 +15,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(props: Inp
     const inputId = useId()
 
     return(
-        <div className='flex items-center justify-between gap-4 from-neutral-500 '>    
+        <div className='flex items-center justify-between gap-4 from-neutral-500 w-auto'>    
             {label && <label htmlFor={inputId}>{label}</label>}
             <div className="relative">
                 <input 

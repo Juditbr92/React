@@ -33,7 +33,7 @@ function AddBookPage() {
 
             <div className='flex h-full place-items-center md:gap-6 lg:gap-20 items-center 2xl:gap-48 2xl:mt-8'>
                 <div className="sm: hidden md:flex">
-                    <img src="public\img\addBook page.jpg" alt="Picture with lots of books" className='md:w-[350px] md:h-[200px] lg:w-[450px] lg:h-[250px] rounded'/>
+                    <img src="img\addBook page.jpg" alt="Picture with lots of books" className='md:w-[350px] md:h-[200px] lg:w-[450px] lg:h-[250px] rounded'/>
                 </div>
 
                 <div className="h-full mt-2">

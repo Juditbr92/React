@@ -18,22 +18,23 @@ function ProfilePage() {
     }
 
     return (
-        <div className="flex flex-col items-center mt-2 w-full gap-4">
-            <div className="flex flex-col gap-2 mt-8 items-center">         
-                    <h1 className='text-4xl text-emerald-700 font-bold font-sans border-b-2 border-black mb-4'>Your profile</h1>
+        <div className="flex mt-4 flex-col items-center min-w-full min-h-auto">
+            <div className="flex flex-col gap-2 mt-auto items-center 2xl:mt-10">         
+                    <h1 className='text-2xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl text-emerald-700 font-bold font-sans mt-2 lg:mt-4 lg:mb-4'>Your profile</h1>
             </div>
 
             <div className='flex gap-64 items-center'>
 
-                <div>
+                <div className='sm: hidden md:flex'>
                     {/* Aquí poner que me venga la imagen perfil*/}
-                    <img src="public\img\editBook.jpg" alt="Photo of the book being modified" className='w-[200px] h-[200px] rounded-full'/>
+                    <img src="img\editBook.jpg" alt="Photo of your avatar" className='w-[200px] h-[200px] rounded-full'/>
                 </div>
 
-                <div>
-                    <form onSubmit = {handleSubmit(onSubmit)} className='h-auto flex flex-col w-auto gap-4 p-8 text-center border-2 border-custom-bg rounded'>
+                <div className='h-full mt-2'>
+                    <form onSubmit = {handleSubmit(onSubmit)} className='h-auto flex flex-col w-auto text-sm md:text-base gap-2 md:gap-4 md:mb-2 lg:mb-8 lg:mt-8 p-4 text-center border-2 2xl:border-4 border-custom-bg rounded 2xl:py-8'>
                         <div>
                             <Input 
+                            className="h-8 lg:h-10 bg-slate-200 border-2 border-custom-bg rounded p-2 2xl:mb-3"
                             label="Username:" 
                             placeholder= "Username" 
                             type="text" 
@@ -49,6 +50,7 @@ function ProfilePage() {
                         </div>
                         <div>
                             <Input 
+                            className="h-8 lg:h-10 bg-slate-200 border-2 border-custom-bg rounded p-2 2xl:mb-3"
                                 label="Email:" 
                                 type="email" 
                                 placeholder="Email"
@@ -65,6 +67,7 @@ function ProfilePage() {
 
                         <div>
                             <Input 
+                            className="h-8 lg:h-10 bg-slate-200 border-2 border-custom-bg rounded p-2 2xl:mb-3"
                             label="Photo:" 
                             type="text" 
                             placeholder= "Photo URL"

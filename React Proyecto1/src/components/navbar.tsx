@@ -13,7 +13,7 @@ function Navbar (props: MenuProps) {
     const headerClasses = "hidden md:flex "
     const classes = `${commonClasses} ${isSidebarOpen ? sidebarClasses : headerClasses}`
 
-    const user = {}
+    const user = null
 
     return (
         <nav className = {classes}>
